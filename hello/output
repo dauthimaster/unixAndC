@@ -1,0 +1,91 @@
+21:29:35 unixAndC  $ gcc helloWorld.c -o helloWorld
+bash: parse_git_branch: command not found
+21:29:52 unixAndC  $ ll
+total 28K
+drwxrwxr-x. 3 dauthimaster 4.0K Jan 23 21:29 .
+drwxrwxr-x. 3 dauthimaster 4.0K Jan 17 11:32 ..
+drwxrwxr-x. 8 dauthimaster 4.0K Jan 17 19:47 .git
+-rwxrwxr-x. 1 dauthimaster 8.4K Jan 23 21:29 helloWorld
+-rw-rw-r--. 1 dauthimaster   88 Jan 23 21:27 helloWorld.c
+-rw-rw-r--. 1 dauthimaster    0 Jan 17 11:32 README.md
+bash: parse_git_branch: command not found
+21:30:03 unixAndC  $ ./helloWorld 
+Hello Worldbash: parse_git_branch: command not found
+21:30:29 unixAndC  $ vim helloWorld.c 
+bash: parse_git_branch: command not found
+21:31:00 unixAndC  $ gcc helloWorld.c -o helloWorld
+bash: parse_git_branch: command not found
+21:31:06 unixAndC  $ ./helloWorld 
+Hello World
+bash: parse_git_branch: command not found
+21:31:12 unixAndC  $ git status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#       helloWorld
+#       helloWorld.c
+nothing added to commit but untracked files present (use "git add" to track)
+bash: parse_git_branch: command not found
+21:31:24 unixAndC  $ mkdir helloWorld
+mkdir: cannot create directory ‘helloWorld’: File exists
+bash: parse_git_branch: command not found
+21:31:44 unixAndC  $ mkdir hello
+bash: parse_git_branch: command not found
+21:31:52 unixAndC  $ mv helloWorld* hello
+bash: parse_git_branch: command not found
+21:32:07 unixAndC  $ ll
+total 16K
+drwxrwxr-x. 4 dauthimaster 4.0K Jan 23 21:32 .
+drwxrwxr-x. 3 dauthimaster 4.0K Jan 17 11:32 ..
+drwxrwxr-x. 8 dauthimaster 4.0K Jan 23 21:31 .git
+drwxrwxr-x. 2 dauthimaster 4.0K Jan 23 21:32 hello
+-rw-rw-r--. 1 dauthimaster    0 Jan 17 11:32 README.md
+bash: parse_git_branch: command not found
+21:32:09 unixAndC  $ cd hello/
+bash: parse_git_branch: command not found
+21:32:11 hello  $ ll
+total 24K
+drwxrwxr-x. 2 dauthimaster 4.0K Jan 23 21:32 .
+drwxrwxr-x. 4 dauthimaster 4.0K Jan 23 21:32 ..
+-rwxrwxr-x. 1 dauthimaster 8.4K Jan 23 21:31 helloWorld
+-rw-rw-r--. 1 dauthimaster   90 Jan 23 21:31 helloWorld.c
+bash: parse_git_branch: command not found
+21:32:12 hello  $ cd ..
+bash: parse_git_branch: command not found
+21:32:14 unixAndC  $ git status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#       hello/
+nothing added to commit but untracked files present (use "git add" to track)
+bash: parse_git_branch: command not found
+21:32:20 unixAndC  $ git add .
+bash: parse_git_branch: command not found
+21:32:26 unixAndC  $ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#       new file:   hello/helloWorld
+#       new file:   hello/helloWorld.c
+#
+bash: parse_git_branch: command not found
+21:32:29 unixAndC  $ git commit -m "Hello world assignment"
+[master ec8dcbe] Hello world assignment
+ 2 files changed, 8 insertions(+)
+ create mode 100755 hello/helloWorld
+ create mode 100644 hello/helloWorld.c
+bash: parse_git_branch: command not found
+21:32:50 unixAndC  $ git push
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 2.71 KiB, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To git@github.com:dauthimaster/unixAndC.git
+   b7cd2e2..ec8dcbe  master -> master
+bash: parse_git_branch: command not found
+21:32:56 unixAndC  $ 
+

@@ -1,0 +1,12 @@
+git init
+vim helloWorld.c
+mkdir hello
+mv helloWorld.c hello
+cd hello
+gcc helloWorld.c -o helloWorld
+./helloWorld
+git status
+cd ..
+git add .
+git commit -m "Hello World assignment"
+git push
