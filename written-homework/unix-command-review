@@ -1,0 +1,111 @@
+cd - change directory
+
+pwd - present working directory (you are here)
+
+chmod - change what the owner, group, and anyone can do to a file
+
+chown - change the owner of a file
+
+chgrp - change the group of a file
+
+date - either shows the current time or sets the system date
+
+du - disk usage of each file in the given dir (or of each given file)
+
+man - view the manual page for the given command
+
+echo - print given arg
+
+printf - functions similarily to C's printf
+
+script - makes  a typescript of everything printed on your terminal. It is useful for students who need a hardcopy  record  of  an  interactive session  as  proof  of  an  assignment,  as  the typescript file can be printed out later with lpr(1).
+
+passwd - password management
+
+uname - print system info
+
+who - prints info about currently logged in users
+
+stty - prints or changes terminal characteristics
+
+mkdir - make directory
+
+rmdir - remove directory
+
+mv - move (also used for renaming)
+
+rm - remove (delete)
+
+cat - print contents of file
+
+more - paginate output
+
+pico - simple text editor (doesn't exist on my machine...)
+
+ed - GNU line editor
+
+vi - a better editor than emacs
+
+wc - word count (also counts lines if you ask it nicely)
+
+lp - used for printing
+
+od - octal dump
+
+tar - groups files together in a single file, compression optional
+
+gzip - gnu zip
+
+zip - regular zip (for losers)
+
+umask - used to change the default file creation mode
+
+find - used to find files...
+
+ln (with our without -s) - create a hardlink or a symbolic link
+
+< - redirect standard input from a file
+<< - these are backwards should be >>, appends output to file (creates file if not already created)
+> - overwrites file with output (creates file if not already created)
+
+tee - copy standard input to each FILE, and also to standard output
+
+ps - list processes
+
+& (at the end of a command) - run in background
+
+nohup - similar to & with more output options
+
+at - executes commands at a specified time
+
+batch - executes commands when system load levels permit
+
+crontab - used to maintain crontab files for users (these are used by cron) aka scheduler
+
+export - save function names or vars for use in the current terminal session
+
+set - list shell vars, also set and unset shell attributes
+
+cmp - compare 2 files, byte by byte
+
+diff - see the text differences in two files (vimdiff is better)
+
+head - show the first part of a file
+
+tail - show the last part of a file (can continue looking for new lines being added and show them to you, nice for watching logs)
+
+cut - just like in word, just on a command line instead
+
+paste - see above
+
+sort - sort lines of files
+
+uniq - report or omit repeated lines (unique)
+
+tr - translate input from one set to another (like lower to uppercase)
+
+grep - your best friend when looking for something specific in a file (or not looking for something specific)
+
+sed (read up on regular expressions used in sed) - stream editor, can do cool stuff
+
+awk (read up on the power of awk) - pattern scanning and processing, can do more cool stuff
