@@ -5,6 +5,7 @@ int main(int argc, char *argv[]){
     int grade[10];
 
     int i;
+    //fill grade[] with 10 ints from user
     for(i=0; i<10; ++i){
         scanf("%d", grade + i);
         printf("%d\n", grade[i]);
@@ -12,8 +13,10 @@ int main(int argc, char *argv[]){
 
     double avg = 0;
     int high = 0;
-    int low = 10;
+    int low = 10; //init low to 10, that way 0-9 will work
 
+    //add up each grade, check each grade against the current high and low
+    //replace high or low if needed
     for(i=0; i<10; ++i){
         avg += grade[i];
         
