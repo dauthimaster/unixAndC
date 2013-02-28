@@ -1,3 +1,7 @@
+/*
+ * James Current
+ * 2/14/2013
+ */
 #include <stdio.h>
 #include <stdlib.h>
 
