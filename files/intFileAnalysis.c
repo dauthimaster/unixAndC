@@ -63,12 +63,53 @@ elem_type kth_smallest(elem_type a[], int n, int k)
 #define median(a,n) kth_smallest(a,n,(((n)&1)?((n)/2):(((n)/2)-1)))
 
 int wordCount(FILE * target){
+    int c;
     int words = 0;
-    while(fscanf(target, "%*d") != EOF){
-        ++words;
+    while(!feof(target)){
+        while((c = getc(target)) != EOF){
+            if(isdigit(c)){
+                ++words;
+                break;
+            }
+        }
+
+        for(; c != EOF; c = getc(target)){
+            if(!isdigit(c)){
+                break;
+            }
+        }
     }
-    rewind(target);
     return words;
+}
+
+long getLong(FILE * target){
+    int c;
+    char str[12] = {0};
+    int i = 0;
+    while((c = getc(target)) != EOF){
+        if(isdigit(c)){
+            str[i++] = c;
+            break;
+        }
+    }
+
+    c = getc(target);
+
+    for(; c != EOF; c = getc(target)){
+        if(i < 11){
+            if(isdigit(c)){
+                str[i++] = c;
+            } else {
+                break;
+            }
+        } else {
+            break;
+        }
+    }
+    if(!i){
+        return -1;
+    }
+    return strtol(str, NULL, 10);
 }
 
 int main(int argc, char * argv[]){
@@ -78,6 +119,7 @@ int main(int argc, char * argv[]){
 
         if(target != NULL){
             int size = wordCount(target);
+            rewind(target);
             if(size > 0){
                 elem_type * a;
                 a = (elem_type*) malloc(size);
@@ -85,14 +127,17 @@ int main(int argc, char * argv[]){
                 int high = INT_MIN;
                 int low = INT_MAX;
                 while(!feof(target)){
-                    fscanf(target, "%d", a + i);
-                    if((int)a[i] > high){
-                        high = (int)a[i];
+                    int check = getLong(target);
+                    if(check > 0){
+                        a[i] = check;
+                        if((int)a[i] > high){
+                            high = (int)a[i];
+                        }
+                        if((int)a[i] < low){
+                            low = (int)a[i];
+                        }
+                        ++i;
                     }
-                    if((int)a[i] < low){
-                        low = (int)a[i];
-                    }
-                    ++i;
                 }
                 int median = (int)median(a, size);
                 printf("Largest: %d\n", high);
